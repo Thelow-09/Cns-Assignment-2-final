@@ -1,0 +1,124 @@
+<body style="background-color:#948A54;">
+
+  <mat-toolbar>
+  
+  <span>Computer and Network Security Assignment II (OTP, 3DES, AES Implementation) </span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon></mat-icon>
+  </button>
+  
+</mat-toolbar>
+
+
+<h3>Choose Encryption Algorithm</h3>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group" layout="row" name="method" [(ngModel)]="method">
+  <mat-radio-button class="example-radio-button" value="OTP" >
+    <h3>OTP</h3>
+  </mat-radio-button>
+  <mat-radio-button class="example-radio-button" value="3DES" >
+    <h3>3DES</h3>
+   </mat-radio-button>
+   <mat-radio-button class="example-radio-button"  value="AES">
+    <h3>AES</h3>
+   </mat-radio-button>
+</mat-radio-group>
+
+<form #In="ngForm" class="example-form" >
+ 
+<div class='parent'>
+  <div class='child'>
+    <h3>Plaintext</h3>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Message to Encrypt" name="msg_encrypt" ngModel>
+     
+    </mat-form-field>
+
+  </div>
+  <div class='child'>
+    <h3>Ciphertext</h3>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Message to Decrypt" name="msg_decrypt" ngModel>
+     
+    </mat-form-field>
+  </div>
+</div>
+
+<div class='parent'>
+  <div class='child'>
+    <h3>Encryption Key</h3>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="" name="encryption_key" [(ngModel)]="ek">
+     
+    </mat-form-field>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" (click)="encrypt(In.value.msg_encrypt)">Encrypt</button>
+      
+
+  </div>
+  
+</div>
+<div class='child'>
+  <h3>Decryption Key</h3>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="" name="decryption_key" [(ngModel)]="dk">
+   
+  </mat-form-field>
+ 
+<div class="example-button-row">
+<button mat-raised-button color="primary" (click)="decrypt(In.value.msg_decrypt)">Decrypt</button>
+
+</div>
+</div> 
+
+</div>
+
+
+<div class='parent'>
+  <div class='child'>
+    <h3>Encrypted Message</h3>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Encrypted Message" name="enc" [(ngModel)]="enc">
+     
+    </mat-form-field>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Copy Encryption</button>
+      
+
+  </div>
+ 
+</div>
+<div class='child'>
+  <h3>Decrypted Message</h3>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Decrypted Message" name="dec" [(ngModel)]="dec">
+   
+  </mat-form-field>
+ 
+<div class="example-button-row">
+<button mat-raised-button color="primary">Copy Decryption</button>
+</div>
+</div>
+
+</div>
+
+</form>
+<mat-card class="white-text">
+  <mat-card-header style="background-color: rgb(92, 5, 5);   width:100%">
+    <mat-card-title >Prepared By: Zelalem Hailu</mat-card-title>
+    <mat-card-title >Id No: ATR/2456/10</mat-card-title>
+  </mat-card-header>
+  <mat-card-content style="background-color: rgb(92, 5, 5);   width:100%">
+    Submitted to: Kinde M.
+  </mat-card-content>
+  <mat-card-content style="background-color: rgb(92, 5, 5);   width:100%">
+    December 20, 2022
+  </mat-card-content>
+ 
+</mat-card>
+
+</body>

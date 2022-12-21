@@ -1,0 +1,20 @@
+
+  .child {
+    display: inline-block;
+    /* border: 1px solid red; */
+    padding: 1rem 1rem;
+    /* vertical-align: middle; */
+  }
+.example-button-row {
+  margin-right: 8px;
+}
+.mat-toolbar {
+    background: #8b0000;
+    color: #fff
+ }
+ .white-text {
+  font-size: 20px;
+  color: whitesmoke !important;
+  text-align: center !important;
+  background: #8b0000;
+}
