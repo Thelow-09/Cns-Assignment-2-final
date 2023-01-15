@@ -1,0 +1,25 @@
+<div *ngIf="!user" class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Log in</mat-card-title>
+        </mat-card-header>
+    <form class="example-form">
+          <mat-card-content>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username">
+            </mat-form-field>
+    <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password">
+            </mat-form-field>
+          </mat-card-content>
+          <button mat-stroked-button color="accent" class="btn-block">Log in</button>
+         <br><br><br> Sign in with Google
+          <asl-google-signin-button>..</asl-google-signin-button>
+
+        </form>
+      </mat-card>
+    </div>
+    <img src="{{ user.photoUrl }}">
+    <h4> {{ user.name }} </h4>
+    <p> {{ user.email }} </p>
+    <app-root *ngIf="user"></app-root>
